@@ -6,7 +6,7 @@
 function formatYYYYMMDD(date) {
   let utcDate = date.getUTCDate();
   let month = date.getMonth() + 1; // as getMonth starts from 0 for Jan
-  let year = date.getFullYear();
+  const year = date.getFullYear();
   // Add a leading 0 to single digit days / months
   if (utcDate < 10) {
     utcDate = `0${utcDate}`;
@@ -27,9 +27,9 @@ function formatYYYYMMDD(date) {
 // @year - increment a year (1), biennial (2)
 function incrementDate(date, days, months, years) {
   // dont mutate passed date, make a copy of it
-  let nextDate = new Date(date.valueOf());
-  nextDate.setDate(nextDate.getDate() + days);
+  let newDate = new Date(date.valueOf());
+  newDate.setDate(newDate.getDate() + days);
   newDate.setMonth(newDate.getMonth() + months);
   newDate.setFullYear(newDate.getFullYear() + years);
-  return nextDate;
+  return newDate;
 }
