@@ -11,5 +11,7 @@ function htmlCollectionForEachElement(className, myFunction) {
   const elements = document.getElementsByClassName(className);
   // Pass the HTMLCollection as the "this" value to the 
   // forEach method to iterate through it.
-  Array.prototype.forEach.call(elements, myFunction(element));
+  Array.prototype.forEach.call(elements, function(element) {
+    myFunction(element);
+  });
 }
