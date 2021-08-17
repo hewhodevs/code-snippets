@@ -14,7 +14,7 @@ function formatYYYYMMDD(date) {
   if (month < 10) {
     month = `0${month}`
   }
-  return `${year}/${month}/${utcDate}`;
+  return `${year}-${month}-${utcDate}`;
 }
 
 // ------------------------------------------
