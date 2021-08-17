@@ -1,11 +1,10 @@
 // ------------------------------------------
-// func htmlCollectionForEachElement
-// use the callback function @myFunction for each element of
-// the HTMLCollection containing elements with @className
-// @className - string value specifying a classname an element must have
-// @myFunction - callback function to use for each element in the collection
+// func forEachElement
+// forEach equivalent to use with a HTMLCollection of elements
+// @className - string value specifying a className to search for
+// @myFunction - callback function to use for each element in the HTMLcollection
 // ------------------------------------------
-function htmlCollectionForEachElement(className, myFunction) {
+function forEachElement(className, myFunction) {
   // HTMLCollection of all elements with the className passed
   const elements = document.getElementsByClassName(className);
   // Pass the HTMLCollection as the "this" value to the 
