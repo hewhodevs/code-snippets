@@ -9,6 +9,7 @@
 function htmlCollectionForEachElement(className, myFunction) {
   // HTMLCollection of all elements with the className passed
   const elements = document.getElementsByClassName(className);
-  // Pass the HTMLCollection as the "this" value to the forEach method to iterate through it.
+  // Pass the HTMLCollection as the "this" value to the 
+  // forEach method to iterate through it.
   Array.prototype.forEach.call(elements, myFunction(element));
 }
