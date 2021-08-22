@@ -4,14 +4,13 @@
 // Takes a date object, and returns a string formatted as YYYY-MM-DD
 // @date - a date object that will not be mutated by this function.
 function formatYYYYMMDD(date) {
-  let utcDate = date.getUTCDate();
-  // as getMonth starts from 0 for Jan
-  let month = date.getMonth() + 1;
-  const year = date.getFullYear();
+  let dayOfMonth = date.getDate();
+  let month = date.getMonth() + 1; // as getMonth starts from 0 for Jan
+  let year = date.getFullYear();
   // Add a leading 0 to single digit days / months
-  if (utcDate < 10) { utcDate = `0${utcDate}` }
-  if (month < 10) { month = `0${month}` }
-  return `${year}-${month}-${utcDate}`;
+  if (dayOfMonth < 10) { dayOfMonth = `0${dayOfMonth}` }
+  if (month < 10) { month = `0${month }` }
+  return `${year}-${month}-${dayOfMonth}`;
 }
 
 // ------------------------------------------
