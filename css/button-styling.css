@@ -10,3 +10,8 @@ button:hover:enabled{
 button:active:enabled{
     /*your styles*/
 }
+
+/* Style a disabled button */
+button:disabled {
+    /*your styles*/
+}
