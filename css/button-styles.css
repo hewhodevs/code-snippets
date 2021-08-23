@@ -1,0 +1,61 @@
+/* 
+--------------------------------------------------
+General Button Styles
+--------------------------------------------------
+*/
+button {
+  padding: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.primary-button {
+  color: #FFFFFF;
+  background-color: #000A5A;
+  border-radius: 2px solid #000A5A;
+}
+.secondary-button {
+  color: #000A5A;
+  background-color: #F8F8FF;
+  border: 2px solid #000A5A;
+}
+.danger-button {
+  color: #FFFFFF;
+  background-color: #B6070F;
+  border: 2px solid #B6070F;
+}
+
+/* 
+--------------------------------------------------
+Enabled Button styles
+--------------------------------------------------
+-- Enable hover and active effects only for enabled buttons
+Showing a hover effect on a disabled button may cause a user to think the button is active
+You can use append the psuedo class :enabled to active and hover states,
+this will only appy the styles when the button is actually enabled & hovered / active.
+*/
+button:hover:enabled {
+  filter: brightness(1.2);
+}
+button:active:enabled {
+  filter: brightness(1.2);
+}
+
+/* 
+--------------------------------------------------
+Disabled Button Styles
+--------------------------------------------------
+*/
+button:disabled {
+  cursor: default;
+}
+.primary-button:disabled, 
+.danger-button:disabled {
+  color: #FFFFFF;
+  background-color: #A0A0A0;
+  border: 2px solid #A0A0A0;
+}
+.secondary-button:disabled {
+  color: #a0a0a0;
+  background-color: #F8F8FF;
+  border: 2px solid #a0a0a0;
+}
